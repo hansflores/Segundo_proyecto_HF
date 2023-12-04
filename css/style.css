@@ -96,6 +96,10 @@ nav ul li a {
 nav ul li a {
   scroll-behavior: smooth;
 }
+nav ul li a:hover {
+  color: black;
+  background-color: #1112D0;
+}
 
 #inicio {
   text-align: center;
@@ -157,6 +161,10 @@ section {
   font-size: 13px;
   color: yellow;
 }
+.proyectos_container_p1 a:hover, .proyectos_container_p2 a:hover {
+  background: radial-gradient(#0f517d, #021a2b);
+  animation: saltoBoton 600ms 200ms linear alternate infinite;
+}
 
 #habilidades {
   text-align: center;
@@ -181,6 +189,10 @@ section {
 .habilidades_container a {
   font-size: 13px;
   color: yellow;
+}
+.habilidades_container a:hover {
+  background: radial-gradient(#0f517d, #021a2b);
+  animation: saltoBoton 600ms 200ms linear alternate infinite;
 }
 
 #contacto {
