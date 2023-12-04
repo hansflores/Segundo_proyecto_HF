@@ -1,0 +1,11 @@
+.articulos
+    @include flex(column, top, center)
+    &_contenedor
+        @extend .articulos
+        gap: 20px
+        background: rgba(255,255,255,0.35)
+        padding-inline: 15px
+        padding-top: 20px
+        position: sticky
+        top: 0px
+        height: 100vh

@@ -1,0 +1,43 @@
+// Perfil
+.perfil
+    @include flex(column, center, center)
+    padding-top: $px10 * 5
+    color: white
+    gap: 10px
+    &_avatar
+        border-radius: 50%
+        background-color: #4fd6ff47
+        width: 230px
+        padding: 20px 10px 0px 10px
+    &_nombre
+        text-transform: uppercase
+        text-align: center
+        font-size: 30px
+        @include sombras(drop-shadow(-2px 2px 3px black))
+    &_titulo
+        @extend .perfil_nombre
+        font-size: 12px
+    &_boton
+        @include boton()
+        border: 1px solid rgba(0, 0, 0, 0.9)
+        &:hover
+            background: radial-gradient(#0f517d , #021a2b)
+            animation: saltoBoton 600ms 200ms linear alternate infinite
+        &:active
+            background: radial-gradient(#053557,#0f517d)
+
+
+.perfil__minibio
+    margin-top: 20px
+    @include flex(column, center, center)
+
+
+.ubicacion--perfil
+    // margin-block: permite establecer margen arriba y abajo (Eje y)
+    // margin-inline: permite establecer margen izquierdo y derecho (Eje x)
+    margin-block: 20px
+    @include flex(null, center, center)
+    &-texto
+        @include flex(column, center, center)
+    &-location
+        margin-top: -22.5px

@@ -1,0 +1,12 @@
+.estadisticas
+    @include flex(row,center,center)
+    gap: 20px
+    background: white
+    padding: 30px
+    border-radius: 20px
+    color: black
+    @include sombras(null, -4px 5px 15px 2px black)
+    &-elemento
+        @include flex(column, center, center)
+        & h3
+            font-style: italic

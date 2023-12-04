@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/* Realizar llamado de Componentes/Partials con (@import)
+ *  se indica que es un componente con el ( _ )
+ *  _globales, _perfil, _estadisticas, _galeria
+ *  (NO NECESITA EXTENCION - SOLO RUTA)
+ *  */
+* {
+  box-sizing: border-box;
+  top: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+a:link, a:active, a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-image: url(../images/fondo_ladrillo_2.svg);
+  background-size: auto;
+  font-family: "Lato", sans-serif;
+  /* Pseudoelementos para editar el SCROLLBAR
+  *  ::-webkit-scrollbar la barra de desplazamiento
+  *  ::-webkit-scrollbar-button los botones de la barra de desplazamiento (flechas que apuntan hacia arriba y hacia abajo).
+  *  ::-webkit-scrollbar-thumb el controlador de desplazamiento arrastrable.
+  *  ::-webkit-scrollbar-track la pista (barra de progreso) de la barra de desplazamiento.
+  *  ::-webkit-scrollbar-track-piece la pista (barra de progreso) NO está cubierta por el mango.
+  *  ::-webkit-scrollbar-cornerla esquina inferior de la barra de desplazamiento, donde se encuentran las barras de desplazamiento horizontal y vertical.
+  *  ::-webkit-resizerel controlador de cambio de tamaño arrastrable que aparece en la esquina inferior de algunos elementos.
+  *  */
+}
+body::-webkit-scrollbar {
+  width: 0.7vmax;
+  background-color: #0F0F0F;
+}
+body::-webkit-scrollbar-thumb {
+  background: radial-gradient(#0aa2d9, #000);
+  border-radius: 10px;
+  border: white;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 72% 28%;
+  width: 100%;
+  height: 100vh;
+}
+
+@keyframes saltoBoton {
+  0% {
+    transform: scale(1) rotate(-5deg);
+    color: white;
+  }
+  33.3% {
+    transform: scale(1.05) rotate(5deg);
+    color: #0b96e1;
+  }
+  66.6% {
+    transform: scale(1.05) rotate(-5deg);
+    color: #0b96e1;
+  }
+  100% {
+    transform: scale(1) rotate(5deg);
+    color: white;
+  }
+}
+header {
+  background-color: rgba(255, 255, 255, 0.1098039216);
+  color: #fff;
+  padding: 1vh;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin-right: 60px;
+}
+
+nav ul li a {
+  scroll-behavior: smooth;
+}
+
+#inicio {
+  text-align: center;
+  color: #fff;
+  padding-block: 60px;
+}
+
+.inicio_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.inicio_container h1 {
+  padding-block: 20px;
+  font-size: 30px;
+}
+.inicio_container h3 {
+  padding-block: 20px;
+  font-size: 40px;
+}
+
+#inicio img {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(252, 255, 79, 0.278);
+  width: 200px;
+}
+
+section {
+  padding: 40px;
+}
+
+#proyectos {
+  text-align: center;
+  color: yellow;
+  font-size: 20px;
+}
+
+.proyectos_container {
+  color: white;
+  text-align: left;
+}
+.proyectos_container_p1, .proyectos_container_p2 {
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: #fff;
+}
+.proyectos_container_p1 h3, .proyectos_container_p2 h3 {
+  font-size: 20px;
+}
+.proyectos_container_p1 ul, .proyectos_container_p2 ul {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.proyectos_container_p1 a, .proyectos_container_p2 a {
+  font-size: 13px;
+  color: yellow;
+}
+
+#habilidades {
+  text-align: center;
+  color: yellow;
+  font-size: 20px;
+}
+
+.habilidades_container {
+  color: white;
+  text-align: left;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: #fff;
+}
+.habilidades_container ul {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.habilidades_container a {
+  font-size: 13px;
+  color: yellow;
+}
+
+#contacto {
+  text-align: center;
+  color: yellow;
+  font-size: 20px;
+}
+
+.contacto_container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  border: 1px solid #333;
+  padding: 10px;
+  border-radius: 20px;
+  border-color: #fff;
+}
+.contacto_container p {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.contacto_container a {
+  font-size: 13px;
+  color: yellow;
+}
+
+.contacto_boton {
+  background: radial-gradient(#1e6fa5, #061625);
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+  color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+.contacto_boton:hover {
+  background: radial-gradient(#0f517d, #021a2b);
+  animation: saltoBoton 600ms 200ms linear alternate infinite;
+}
+.contacto_boton:active {
+  background: radial-gradient(#053557, #0f517d);
+}
+
+.galeria {
+  color: yellow;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.galeria_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 300px;
+  width: auto;
+  overflow-y: scroll;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+.galeria_container::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+}
+.galeria_container::-webkit-scrollbar-thumb {
+  background: radial-gradient(#0aa2d9, #000);
+  border-radius: 10px;
+}
+.galeria_container img {
+  width: 300px;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  position: sticky;
+  top: 0px;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.1098039216);
+  color: white;
+  padding: 5vh;
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
